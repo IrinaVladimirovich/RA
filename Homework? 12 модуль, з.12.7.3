@@ -1,0 +1,14 @@
+money = float(input('введите сумму '))
+per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}
+A = per_cent.get('ТКБ')
+dep1 = round(money/100*A,2)
+B = per_cent.get('СКБ')
+dep2 = round(money/100*B,2)
+C = per_cent.get('ВТБ')
+dep3 = round(money/100*C,2)
+D = per_cent.get('СБЕР')
+dep4 = round(money/100*D,2)
+deposit = [dep1,dep2,dep3,dep4]
+print(list(map(float,deposit)))
+i = max(deposit)
+print("Максимальная сумма, которую вы можете заработать - ", i)
