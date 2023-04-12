@@ -12,3 +12,13 @@ deposit = [dep1,dep2,dep3,dep4]
 print(list(map(float,deposit)))
 i = max(deposit)
 print("Максимальная сумма, которую вы можете заработать - ", i)
+
+# 2 способ:
+money = float(input('введите сумму '))
+per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}
+A =[]
+for k in dict.values(per_cent):
+     dep = round(money/100*k,2)
+     A.append(dep)
+print(list(A))
+print("Максимальная сумма, которую вы можете заработать - ", max(list(A)))
